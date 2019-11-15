@@ -14,6 +14,10 @@ This is a project foundation for C++
 
 make
 
+# testing
+
+./test/RunTest
+
 # install
 
 make install
