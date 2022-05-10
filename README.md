@@ -4,7 +4,7 @@ This is a project foundation for C++
 
 # Initial Setup
 
-./tools/autotools.sh
+./autogen.sh
 
 # configuring
 
