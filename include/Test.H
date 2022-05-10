@@ -29,6 +29,8 @@
 #ifndef TEST_H_
 #define TEST_H_
 
+#include <ALSA/ALSA.H>
+
 /** Class to test the wasm setup
 */
 class Test {

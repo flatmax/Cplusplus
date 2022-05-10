@@ -28,7 +28,10 @@
 
 #include "Test.H"
 
+#include <Sox.H>
+
 int main(int argc, char *argv[]){
   Test test; // test the construction and destruction of the Test class.
+  Sox<int> sox; // tests that gtkIOStream is linking
   return 0;
 }

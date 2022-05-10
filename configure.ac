@@ -75,11 +75,22 @@ if test "x$HAVE_EIGEN" == xyes ; then
     AC_DEFINE(HAVE_EIGEN, [], [whether to build in Eigen support])
 fi
 
+# gtkiostream
+PKG_CHECK_MODULES([GTKIOSTREAM], [gtkIOStream], HAVE_GTKIOSTREAM="yes", HAVE_GTKIOSTREAM="no")
+AC_SUBST([GTKIOSTREAM_CFLAGS])
+AC_SUBST([GTKIOSTREAM_LIBS])
+AM_CONDITIONAL(HAVE_GTKIOSTREAM, test x$HAVE_GTKIOSTREAM = xyes)
+if test "x$HAVE_GTKIOSTREAM" == xyes ; then
+    AC_DEFINE(HAVE_GTKIOSTREAM, [], [whether to build in gtkIOStream support])
+fi
+
 AC_C_INLINE
 AC_FUNC_ERROR_AT_LINE
 
 AC_CONFIG_FILES([Makefile api/Makefile src/Makefile test/Makefile])
 AC_OUTPUT
 
-AM_COND_IF(HAVE_EIGEN, [AC_MSG_NOTICE([Eigen   ....................................... Present])], [AC_MSG_NOTICE([Eigen   ......................................... Not present
-Eigen tests and applications will not be built.])])
+AM_COND_IF(HAVE_EIGEN,       [AC_MSG_NOTICE([Eigen         ...................................... Present])], [AC_MSG_NOTICE([Eigen   ......................................... Not present
+Eigen related tests and applications will not be built.])])
+AM_COND_IF(HAVE_GTKIOSTREAM, [AC_MSG_NOTICE([gtkIOStream   ...................................... Present])], [AC_MSG_NOTICE([gtkIOStream   ................................... Not present
+gtkIOStream related tests and applications will not be built.])])
