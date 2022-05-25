@@ -26,11 +26,11 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-lib_LTLIBRARIES = libwasmaudio.la
+lib_LTLIBRARIES = libcplusplus.la
 
-libwasmaudio_la_SOURCES = Test.C
-libwasmaudio_la_CPPFLAGS = -I$(top_srcdir)/include
-libwasmaudio_la_LDFLAGS =  -version-info $(LT_CURRENT) -release $(LT_RELEASE)
+libcplusplus_la_SOURCES = Test.C
+libcplusplus_la_CPPFLAGS = -I$(top_srcdir)/include
+libcplusplus_la_LDFLAGS =  -version-info $(LT_CURRENT) -release $(LT_RELEASE)
 
 if HAVE_EMSCRIPTEN
 # compile and clean WASM files here
