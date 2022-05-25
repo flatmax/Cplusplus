@@ -87,7 +87,7 @@ fi
 AC_C_INLINE
 AC_FUNC_ERROR_AT_LINE
 
-AC_CONFIG_FILES([Makefile api/Makefile src/Makefile test/Makefile])
+AC_CONFIG_FILES([Makefile api/Makefile src/Makefile test/Makefile applications/Makefile])
 AC_OUTPUT
 
 AM_COND_IF(HAVE_EIGEN, [AC_MSG_NOTICE([Eigen   ....................................... Present])], [AC_MSG_NOTICE([Eigen   ......................................... Not present
