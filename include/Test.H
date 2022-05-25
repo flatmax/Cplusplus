@@ -29,7 +29,7 @@
 #ifndef TEST_H_
 #define TEST_H_
 
-/** Class to test the wasm setup
+/** Class to test the c++ setup
 */
 class Test {
 public:
